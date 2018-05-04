@@ -1,0 +1,104 @@
+{
+  "colorArray": [
+    "#FF6304",
+    "#A570C6",
+    "#48B5D8"
+  ],
+  "segmentValuesArray": [
+    {
+      "probability": 10,
+      "type": "image",
+      "value": "./assets/media/svgs/nightstay-text.svg",
+      "win": true,
+      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "userData": {
+        "score": 10,
+        "userPrize": "NightStay"
+      }
+    },
+    {
+      "probability": 10,
+      "type": "image",
+      "value": "./assets/media/svgs/breakfast-text.svg",
+      "win": true,
+      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "userData": {
+        "score": 10,
+        "userPrize": "Breakfast"
+      }
+    },
+    {
+      "probability": 10,
+      "type": "image",
+      "value": "./assets/media/svgs/reward-points-text.svg",
+      "win": true,
+      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "userData": {
+        "score": 10,
+        "userPrize": "300Points"
+      }
+    },
+    {
+      "probability": 10,
+      "type": "image",
+      "value": "./assets/media/svgs/pillows-text.svg",
+      "win": true,
+      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "userData": {
+        "score": 10,
+        "userPrize": "PillowSet"
+      }
+    },
+    {
+      "probability": 10,
+      "type": "image",
+      "value": "./assets/media/svgs/wild-card-text.svg",
+      "win": true,
+      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "userData": {
+        "score": 10,
+        "userPrize": "WildCard"
+      }
+    },
+    {
+      "probability": 50,
+      "type": "image",
+      "value": "./assets/media/svgs/try-again-text.svg",
+      "win": false,
+      "resultText": "Sorry! Better luck next time!",
+      "userData": {
+        "score": 0,
+        "userPrize": "TryAgain"
+      }
+    }
+  ],
+  "svgWidth": 768,
+  "svgHeight": 768,
+  "wheelStrokeColor": "#FB313C",
+  "wheelStrokeWidth": 10,
+  "wheelSize": 700,
+  "wheelTextOffsetY": 100,
+  "wheelTextColor": "#EDEDED",
+  "wheelTextSize": "1.5em",
+  "wheelImageOffsetY": 60,
+  "wheelImageSize": 150,
+  "centerCircleSize": 10,
+  "centerCircleStrokeColor": "#222",
+  "centerCircleStrokeWidth": 2,
+  "centerCircleFillColor": "#FFF",
+  "segmentStrokeColor": "#E2E2E2",
+  "segmentStrokeWidth": 5,
+  "centerX": 384,
+  "centerY": 384,
+  "hasShadows": false,
+  "numSpins": 4,
+  "spinDestinationArray": [],
+  "minSpinDuration": 10,
+  "gameOverText": "That’s your 4 spins used up! Try Bid2Stay for real at <a href='https://bid2stay.co.za/'>Bid2Stay.co.za!</a>",
+  "invalidSpinText": "INVALID SPIN. PLEASE SPIN AGAIN.",
+  "introText": "SPIN IT TO WIN!",
+  "hasSound": true,
+  "gameId": "9a0232ec06bc431114e2a7f3aea03bbe2164f1aa",
+  "clickToSpin": true,
+  "spinDirection": "cw"
+}

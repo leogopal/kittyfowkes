@@ -1,0 +1,313 @@
+body {
+  background: #222 url('../../assets/images/background-small.png') no-repeat center fixed;
+  background-size: cover;
+  overflow: hidden;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.bid2stay-logo {
+  width: 250px;
+  margin: 20px;
+}
+
+.peg, .wheelSVG {
+  visibility: hidden;
+}
+
+.wheelContainer, body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.centerCircle,
+.valueContainer,
+.wheelOutline,
+.wheelText {
+  pointer-events: none;
+}
+
+.toast,
+.wheelContainer,
+body,
+html {
+  text-align: center;
+}
+
+.wheelContainer,
+button.spin-wheel {
+  transform: translate(-50%, 0);
+}
+
+.toast,
+button.spin-wheel {
+  position: absolute;
+  background-color: #ef3f23;
+}
+
+button.spin-wheel span.spin-count {
+  background: #FFF;
+  color: red;
+  padding: 6px 10px;
+  font-size: 1rem;
+  line-height: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+button.spin-wheel:disabled {
+  opacity: 0.3;
+}
+
+.wheelContainer {
+  position: absolute;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  top: 180px;
+}
+
+.wheelSVG {
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  height: auto;
+  max-height: 70%;
+}
+
+.wheelText {
+  text-anchor: middle;
+  font-family: 'Raleway', Arial, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.toast {
+  border-radius: 12px;
+  opacity: 0;
+}
+
+.toast p {
+  clear: both;
+  font-family: 'Raleway', Arial, sans-serif;
+  margin: 23px;
+  font-size: 1.2rem;
+  color: #ededed;
+  letter-spacing: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5rem;
+  -webkit-transition: line-height .2s ease;
+  transition: line-height .2s ease;
+}
+
+button.spin-wheel {
+  left: 50%;
+  top: 100px;
+  padding: 15px 30px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #ededed;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 0 #D71559;
+  cursor: pointer;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 480px) {
+  .toast p,
+  .toast span {
+    font-size: 1.2rem;
+    line-height: 18px;
+  }
+
+  button.spin-wheel {
+    font-size: 1.2rem;
+    padding: 15px;
+    top: 100px;
+  }
+
+  .bid2stay-logo {
+    margin: 20px;
+    width: 250px;
+  }
+
+  .wheelContainer {
+    top: 180px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  .toast p,
+  .toast span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  button.spin-wheel {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .toast p, .toast span {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media only screen and (max-height: 480px) {
+  .toast p, .toast span {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+
+  button.spin-wheel {
+    font-size: 1.2rem;
+    padding: 10px;
+    /*width: 40%;*/
+  }
+
+  .wheelContainer {
+    top: 70px;
+  }
+}
+
+button.spin-wheel:focus {
+  outline: 0;
+}
+
+body.page {
+  overflow: visible;
+}
+
+.content {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@import 'magnific-popup';
+
+/* Styles for dialog window */
+#facebook-login-dialog {
+  background: white;
+  padding: 20px 30px;
+  text-align: left;
+  max-width: 250px;
+  margin: 40px auto;
+  position: relative;
+}
+
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+
+
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  transform: scale(0.8);
+
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
