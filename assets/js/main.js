@@ -90,8 +90,11 @@ jQuery(document).ready(function ($) {
 	// successful.  See statusChangeCallback() for when this call is made.
 	function testAPI() {
 		console.log('Welcome!  Fetching your information.... ');
-		FB.api('/me', {fields: 'name, first_name, email'}, function (response) {
-			console.log('Successful login for: ' + response.name);
+		FB.api('/me', {fields: 'name,first_name,email,picture'}, function (data) {
+			var welcomeBlock = document.getElementById('facebook-status');
+			var profilePicture = document.getElementById('profile_picture');
+			welcomeBlock.innerHTML = '<p>Welcome <strong>' + data.first_name + '</strong> you may now play!</p>';
+			profilePicture.innerHTML = '<img src="'+data.picture+'">';
 		});
 	}
 
@@ -134,7 +137,7 @@ jQuery(document).ready(function ($) {
 
 		FB.login(function (response) {
 			checkLoginState();
-		}, {scope: 'public_profile,email'});
+		}, {scope: 'public_profile,email,picture'});
 	}
 
 
