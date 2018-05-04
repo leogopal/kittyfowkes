@@ -7,74 +7,74 @@
   "segmentValuesArray": [
     {
       "probability": 10,
-      "type": "image",
-      "value": "./assets/media/svgs/nightstay-text.svg",
+      "type": "string",
+      "value": "Hell Yeah!",
       "win": true,
-      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "resultText": "It's a Hell Yeah! Good Luck!",
       "userData": {
         "score": 10,
-        "userPrize": "NightStay"
+        "userPrize": "HellYeah!"
       }
     },
     {
       "probability": 10,
-      "type": "image",
-      "value": "./assets/media/svgs/breakfast-text.svg",
+      "type": "string",
+      "value": "Fuck NO!",
       "win": true,
-      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "resultText": "That's probably not such a great idea",
       "userData": {
         "score": 10,
-        "userPrize": "Breakfast"
+        "userPrize": "FuckNo"
       }
     },
     {
       "probability": 10,
-      "type": "image",
-      "value": "./assets/media/svgs/reward-points-text.svg",
+      "type": "string",
+      "value": "Hmm... Maybe.",
       "win": true,
-      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "resultText": "A bit on the fence here, spin again or rephrase the questions.",
       "userData": {
         "score": 10,
-        "userPrize": "300Points"
+        "userPrize": "MayBe"
       }
     },
     {
       "probability": 10,
-      "type": "image",
-      "value": "./assets/media/svgs/pillows-text.svg",
+      "type": "string",
+      "value": "Why the^Hell Not?",
       "win": true,
-      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "resultText": "Famous last words, or a really great time.",
       "userData": {
         "score": 10,
-        "userPrize": "PillowSet"
+        "userPrize": "WhyNot"
       }
     },
     {
       "probability": 10,
-      "type": "image",
-      "value": "./assets/media/svgs/wild-card-text.svg",
+      "type": "string",
+      "value": "Oh Sh!t.^Please Don't!",
       "win": true,
-      "resultText": "Congrats! You’ve just entered the draw to win! Winners will be contacted soon!",
+      "resultText": "Uh... no, just... no.",
       "userData": {
         "score": 10,
-        "userPrize": "WildCard"
+        "userPrize": "PleaseDont"
       }
     },
     {
-      "probability": 50,
-      "type": "image",
-      "value": "./assets/media/svgs/try-again-text.svg",
+      "probability": 10,
+      "type": "string",
+      "value": "Go for it!",
       "win": false,
-      "resultText": "Sorry! Better luck next time!",
+      "resultText": "Life's short, go for it!",
       "userData": {
         "score": 0,
-        "userPrize": "TryAgain"
+        "userPrize": "Goforit"
       }
     }
   ],
   "svgWidth": 768,
   "svgHeight": 768,
-  "wheelStrokeColor": "#FB313C",
+  "wheelStrokeColor": "#FFF",
   "wheelStrokeWidth": 10,
   "wheelSize": 700,
   "wheelTextOffsetY": 100,
@@ -91,10 +91,10 @@
   "centerX": 384,
   "centerY": 384,
   "hasShadows": false,
-  "numSpins": 4,
+  "numSpins": 5,
   "spinDestinationArray": [],
   "minSpinDuration": 10,
-  "gameOverText": "That’s your 4 spins used up! Try Bid2Stay for real at <a href='https://bid2stay.co.za/'>Bid2Stay.co.za!</a>",
+  "gameOverText": "That’s your 5 spins used up! Refresh or come back tomorrow!",
   "invalidSpinText": "INVALID SPIN. PLEASE SPIN AGAIN.",
   "introText": "SPIN IT TO WIN!",
   "hasSound": true,

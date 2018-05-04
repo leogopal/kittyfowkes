@@ -89,6 +89,17 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/assets\/images\/background-small.jpg": {
+		"ft": 16384,
+		"iS": 249410,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/images\/background-small.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/images\/background-small.png": {
 		"ft": 32768,
 		"iS": 416739,
@@ -2707,7 +2718,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 546511756,
-	"displayValue": "spin-to-win-facebook-app",
+	"displayValue": "public",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-karate",
 	"iconImageWasSetByUser": 0

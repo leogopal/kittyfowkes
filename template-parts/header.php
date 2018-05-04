@@ -23,24 +23,10 @@
     <!-- Load the Stylesheets -->
 	<link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50081674-6"></script>
-    <script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-50081674-6');
-    </script>
-
 </head>
 
 <body class="bid2stay <?php echo $page_class; ?>">
 
-<div class="animated fadeIn clearfix">
+<div class="main-container">
 
-    <div class="header">
-        <img class="bid2stay-logo" src="assets/images/logo@2x.png">
-    </div>
 

@@ -1,8 +1,15 @@
 body {
-  background: #222 url('../../assets/images/background-small.png') no-repeat center fixed;
+  background: #222 url('../../assets/images/background-small.jpg') no-repeat center fixed;
   background-size: cover;
   overflow: hidden;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+
 }
 
 body,
@@ -43,11 +50,6 @@ html {
   animation-fill-mode: both;
 }
 
-.bid2stay-logo {
-  width: 250px;
-  margin: 20px;
-}
-
 .peg, .wheelSVG {
   visibility: hidden;
 }
@@ -81,7 +83,7 @@ button.spin-wheel {
 .toast,
 button.spin-wheel {
   position: absolute;
-  background-color: #ef3f23;
+  background-color: black;
 }
 
 button.spin-wheel span.spin-count {
@@ -156,7 +158,7 @@ button.spin-wheel {
   color: #ededed;
   border-radius: 6px;
   border: none;
-  box-shadow: 0 2px 0 #D71559;
+  box-shadow: 0 2px 0 #222;
   cursor: pointer;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
   text-transform: uppercase;

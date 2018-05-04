@@ -9,7 +9,7 @@
 
         <div id="facebook-login-dialog" class="zoom-anim-dialog mfp-hide">
             <h3>Connect to Play</h3>
-            <p>Connect with Facebook in order to play and stand a chance to win with <strong>Bid2Stay</strong>.</p>
+            <p>Connect with Facebook in order to play.</p>
             <div id="facebook-status"></div>
             <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true" scope="public_profile,email" onlogin="checkLoginState();"></div>
         </div>

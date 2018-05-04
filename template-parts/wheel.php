@@ -7,7 +7,7 @@
  */
 ?>
 <div class="wheel-button">
-    <button class="spin-wheel" id="spin-wheel">Click to Spin <span class="spin-count"></span></button>
+    <button class="spin-wheel" id="spin-wheel">Click to Decide <span class="spin-count"></span></button>
 </div>
 
 <div class="wheelContainer">

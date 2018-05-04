@@ -913,7 +913,7 @@ function Spin2WinWheel() {
 			});
 
 			//show the gameOver text after 4 seconds
-			showToast('You have used up your 4 spins for today');
+			showToast('You have used up your 5 spins for today');
 
 		},
 

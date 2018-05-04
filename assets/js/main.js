@@ -3,15 +3,11 @@
 jQuery(document).ready(function ($) {
 
 	var mySpinBtn = document.querySelector('.spin-wheel');
-	var numSpinsRemaining = 4;
+	var numSpinsRemaining = 5;
 	var spinCountBadge = $("span.spin-count");
 
 	//create a new instance of Spin2Win Wheel and pass in the vars object
 	var myWheel = new Spin2WinWheel();
-
-	if (Cookies.get('bid2stay-spin-count')) {
-		numSpinsRemaining = Cookies.get('bid2stay-spin-count');
-	}
 
 	// Load the SDK asynchronously
 	(function (d, s, id) {
@@ -60,14 +56,15 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	window.fbAsyncInit = function () {
+	window.fbAsyncInit = function() {
 		FB.init({
-			appId: '2067015103536556',
-			cookie: true,  // enable cookies to allow the server to access
-		                   // the session
-			xfbml: true,  // parse social plugins on this page
-			version: 'v2.8' // use graph api version 2.8
+			appId      : '1715897878504501',
+			cookie     : true,
+			xfbml      : true,
+			version    : 'v2.8'
 		});
+
+		FB.AppEvents.logPageView();
 
 		// Now that we've initialized the JavaScript SDK, we call
 		// FB.getLoginStatus().  This function gets the state of the
@@ -159,14 +156,6 @@ jQuery(document).ready(function ($) {
 		numSpinsRemaining = numSpinsRemaining - 1;
 		spinCountBadge.text(numSpinsRemaining);
 
-		//e is gameResultsArray
-		Cookies.set('bid2stay-spin-count', numSpinsRemaining, {
-			expires: 1,
-			domain: document.location.hostname,
-			path: '/',
-			secure: false
-		});
-
 		// if you have defined a userData object...
 		if (e.userData) {
 
@@ -209,18 +198,6 @@ jQuery(document).ready(function ($) {
 
 		});
 
-		if (numSpinsRemaining < 1) {
-			myWheel.onMaxSpinsReached();
-		}
-
-
-		//if(e.spinCount == 3){
-		//show the game progress when the spinCount is 3
-		//console.log(e.target.getGameProgress());
-		//restart it if you like
-		//e.target.restart();
-		//}
-
 	}
 
 //your own function to capture any errors
@@ -232,29 +209,9 @@ jQuery(document).ready(function ($) {
 
 	function myGameEnd(e) {
 
-		//e is gameResultsArray
-		Cookies.set('bid2stay', 'game-played', {
-			expires: 1,
-			domain: document.location.hostname,
-			path: '/',
-			secure: false
-		});
-
 		mySpinBtn.disabled = true;
 
 		console.log(e);
-		TweenMax.delayedCall(5, function () {
-
-			FB.ui({
-				method: 'apprequests',
-				message: 'Spin the wheel and you could stand a chance to win with Bid2Stay!',
-				title: 'Invite your friends to stand a chance to win'
-			}, function (fbappresponse) {
-				console.log(fbappresponse);
-			});
-
-		})
-
 
 	}
 
@@ -273,21 +230,6 @@ jQuery(document).ready(function ($) {
 			});
 
 			spinCountBadge.text(numSpinsRemaining);
-
-			if (Cookies.get('bid2stay') || (numSpinsRemaining == 0 || numSpinsRemaining == '0')) {
-				spinCountBadge.text('0');
-				console.log('already played max');
-				mySpinBtn.disabled = true;
-				myWheel.playedEnough();
-
-				FB.ui({
-					method: 'apprequests',
-					message: 'Spin the wheel and you could stand a chance to win with Bid2Stay!',
-					title: 'Invite your friends to stand a chance to win'
-				}, function (fbappresponse) {
-					console.log(fbappresponse);
-				});
-			}
 
 			//WITHOUT your own button
 			// myWheel.init({data:jsonData, onResult:myResult, onGameEnd:myGameEnd, onError:myError});
