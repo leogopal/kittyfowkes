@@ -43,9 +43,11 @@ jQuery(document).ready(function ($) {
 		FB.getLoginStatus(function (response) {
 			if (response.status === 'connected') {
 
-				FB.api('/me', {fields: 'name,first_name,email'}, function (data) {
+				FB.api('/me', {fields: 'name,first_name,email,picture'}, function (data) {
 					var welcomeBlock = document.getElementById('facebook-status');
+					var profilePicture = document.getElementById('profile_picture');
 					welcomeBlock.innerHTML = '<p>Welcome <strong>' + data.first_name + '</strong> you may now play!</p>';
+					profilePicture.innerHTML = '<img src="'+data.picture+'">';
 				});
 
 				setTimeout(function () {
@@ -97,9 +99,11 @@ jQuery(document).ready(function ($) {
 		if (response.status == 'connected') {
 			$.magnificPopup.close();
 			console.log('onlogin callback');
-			FB.api('/me', {fields: 'name, first_name, email'}, function (data) {
-				var welcomeBlock = document.getElementById('fb-welcome');
-				welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+			FB.api('/me', {fields: 'name,first_name,email,picture'}, function (data) {
+				var welcomeBlock = document.getElementById('facebook-status');
+				var profilePicture = document.getElementById('profile_picture');
+				welcomeBlock.innerHTML = '<p>Welcome <strong>' + data.first_name + '</strong> you may now play!</p>';
+				profilePicture.innerHTML = '<img src="'+data.picture+'">';
 			});
 		}
 	}
@@ -240,7 +244,6 @@ jQuery(document).ready(function ($) {
 // And finally call it
 	init();
 
-})
-;
+});
 
 

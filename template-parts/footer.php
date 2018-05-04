@@ -23,9 +23,11 @@
                 FB.getLoginStatus(function (response) {
 	                if (response.status === 'connected') {
 
-	                	FB.api('/me', {fields: 'name,first_name,email'}, function (data) {
+	                	FB.api('/me', {fields: 'name,first_name,email,picture'}, function (data) {
 			                var welcomeBlock = document.getElementById('facebook-status');
+			                var profilePicture = document.getElementById('profile_picture');
 			                welcomeBlock.innerHTML = '<p>Welcome <strong>' + data.first_name + '</strong> you may now play!</p>';
+			                profilePicture.innerHTML = '<img src="'+data.picture+'">';
 		                });
 
 		                setTimeout(function(){
