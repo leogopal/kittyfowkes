@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
 					var welcomeBlock = document.getElementById('facebook-status');
 					var profilePicture = document.getElementById('profile_picture');
 					welcomeBlock.innerHTML = '<p>Welcome <strong>' + data.first_name + '</strong> you may now play!</p>';
-					profilePicture.innerHTML = '<img src="'+data.picture+'">';
+					profilePicture.innerHTML = '<img src="' + data.picture.data.url + '">';
 				});
 
 				setTimeout(function () {
@@ -58,12 +58,12 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	window.fbAsyncInit = function() {
+	window.fbAsyncInit = function () {
 		FB.init({
-			appId      : '1715897878504501',
-			cookie     : true,
-			xfbml      : true,
-			version    : 'v2.8'
+			appId: '1715897878504501',
+			cookie: true,
+			xfbml: true,
+			version: 'v2.8'
 		});
 
 		FB.AppEvents.logPageView();
@@ -94,7 +94,7 @@ jQuery(document).ready(function ($) {
 			var welcomeBlock = document.getElementById('facebook-status');
 			var profilePicture = document.getElementById('profile_picture');
 			welcomeBlock.innerHTML = '<p>Welcome <strong>' + data.first_name + '</strong> you may now play!</p>';
-			profilePicture.innerHTML = '<img src="'+data.picture+'">';
+			profilePicture.innerHTML = '<img src="' + data.picture.data.url + '">';
 		});
 	}
 
@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
 				var welcomeBlock = document.getElementById('facebook-status');
 				var profilePicture = document.getElementById('profile_picture');
 				welcomeBlock.innerHTML = '<p>Welcome <strong>' + data.first_name + '</strong> you may now play!</p>';
-				profilePicture.innerHTML = '<img src="'+data.picture+'">';
+				profilePicture.innerHTML = '<img src="' + data.picture.data.url + '">';
 			});
 		}
 	}
