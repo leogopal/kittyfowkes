@@ -15,7 +15,6 @@
 <script src='assets/js/plugins/Draggable.min.js'></script>
 <script src='assets/js/plugins/ThrowPropsPlugin.min.js'></script>
 <script src='assets/js/plugins/TextPlugin.min.js'></script>
-<script src='assets/js/plugins/js.cookie.js'></script>
 
 <script src='assets/js/wheel-behavior.js'></script>
 <script src="assets/js/main.js"></script>
