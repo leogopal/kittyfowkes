@@ -28,6 +28,6 @@
 <body class="bid2stay <?php echo $page_class; ?>">
 
 <div class="main-container">
-    <div id="profile_picture"></div>
+
 
 
