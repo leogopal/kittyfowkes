@@ -8,9 +8,6 @@ jQuery(document).ready(function ($) {
 
 	//create a new instance of Spin2Win Wheel and pass in the vars object
 	var myWheel = new Spin2WinWheel();
-	$.magnificPopup.close();
-
-
 
 	// This is called with the results from from FB.getLoginStatus().
 	function statusChangeCallback(response) {
@@ -207,7 +204,7 @@ jQuery(document).ready(function ($) {
 
 	function myGameEnd(e) {
 
-		mySpinBtn.disabled = true;
+		//mySpinBtn.disabled = true;
 
 		console.log(e);
 
