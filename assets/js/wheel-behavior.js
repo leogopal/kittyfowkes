@@ -108,9 +108,9 @@ function Spin2WinWheel() {
 			segmentValuesArray = dataObj.segmentValuesArray;
 			numSegments = segmentValuesArray.length;
 			numSpins = (dataObj.numSpins == -1) ? 9999999999999999 : parseInt(dataObj.numSpins);
-			if (Cookies.get('bid2stay-spin-count')) {
+			
 				numSpins = (parseInt(Cookies.get('bid2stay-spin-count')) > 0) ? parseInt(Cookies.get('bid2stay-spin-count')) : 1;
-			}
+			
 			minSpinDuration = dataObj.minSpinDuration;
 			gameOverText = dataObj.gameOverText;
 			invalidSpinText = dataObj.invalidSpinText;
