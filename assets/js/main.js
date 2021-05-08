@@ -8,16 +8,9 @@ jQuery(document).ready(function ($) {
 
 	//create a new instance of Spin2Win Wheel and pass in the vars object
 	var myWheel = new Spin2WinWheel();
+	$.magnificPopup.close();
 
-	// Load the SDK asynchronously
-	(function (d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s);
-		js.id = id;
-		js.src = "https://connect.facebook.net/en_US/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
+
 
 	// This is called with the results from from FB.getLoginStatus().
 	function statusChangeCallback(response) {
@@ -50,9 +43,7 @@ jQuery(document).ready(function ($) {
 					profilePicture.innerHTML = '<img src="' + data.picture.data.url + '">';
 				});
 
-				setTimeout(function () {
-					$.magnificPopup.close();
-				}, 4000);
+				
 
 			}
 		});
@@ -100,7 +91,7 @@ jQuery(document).ready(function ($) {
 
 	function onLogin(response) {
 		if (response.status == 'connected') {
-			$.magnificPopup.close();
+			
 			console.log('onlogin callback');
 			FB.api('/me', {fields: 'name,first_name,email,picture'}, function (data) {
 				var welcomeBlock = document.getElementById('facebook-status');
@@ -173,7 +164,7 @@ jQuery(document).ready(function ($) {
 
 		console.log(e);
 
-		FB.api('/me', {fields: 'name,first_name,last_name,email'}, function (fbresponse) {
+		// FB.api('/me', {fields: 'name,first_name,last_name,email'}, function (fbresponse) {
 			var participant = {};
 
 			console.log('Successful login for: ' + fbresponse.name);
@@ -203,7 +194,7 @@ jQuery(document).ready(function ($) {
 				}
 			});
 
-		});
+		// });
 
 	}
 
